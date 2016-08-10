@@ -1,0 +1,132 @@
+$c-body: #fff;
+$c-card: #fff;
+$c-base: #f06;
+$c-base-mono: #888;
+$c-heading: #aaa;
+$c-border: #bbb;
+$c-tx-light: #fff;
+$c-shadow: rgba(0,0,0,0.4);
+$c-new-row: #ffc;
+$c-hilite-row: #cfc;
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: $c-body;
+    font-family: Arial, sans-serif;
+}
+
+* {
+    box-sizing: content-box;
+}
+
+#app {
+    margin: 0;
+    padding: 0;
+    
+    font-size: 90%;
+    
+    header {
+        background: $c-base;
+        padding: 1em;
+        box-shadow: 0 0 1em $c-shadow;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        
+        h1 {
+            margin: 0;
+            font-size: 1.2em;
+            color: $c-tx-light;
+        }
+    }
+    
+    .sk-app {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 4em 1em 1em;
+        
+        h3 {
+            margin: 0;
+            color: $c-heading;
+        }
+    }
+    
+    .sk-stock-add {
+        
+        margin: 1em auto;
+        max-width: 550px;
+        
+        fieldset {
+            padding: 1em;
+            background-color: $c-card;
+            border: 1px solid $c-border;
+        }
+        
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            
+            li {
+                margin: 0.6em 0;
+                flex: 1 0 50%;
+            }
+        }
+        input[type="text"] {
+            min-width: 230px;
+        }
+        
+        .controls {
+            text-align: right;
+        }
+    }
+    
+    .sk-stock-list {
+        
+        h3 {
+            margin: 1em auto;
+        }
+        
+        table {
+            width: 100%;
+            text-align: left;
+            font-size: 0.8em;
+            border: 1px solid $c-border;
+            border-spacing: 1px;
+            border-collapse: separate;
+            
+            tr {
+                will-change: background-color;
+                transition: background-color 0.6s ease;
+                
+                &:hover {
+                    transition: none;
+                    background-color: $c-hilite-row;
+                }
+                
+                &.new {
+                    background-color: $c-new-row;
+                    transition: none;
+                }
+            }
+            
+            th, td {
+                margin: 0;
+                padding: 1em;
+                vertical-align: top;
+            }
+            
+            th {
+                background: $c-base-mono;
+                color: $c-tx-light;
+                padding: 0.5em 1em;
+            }
+        }
+    }
+}
