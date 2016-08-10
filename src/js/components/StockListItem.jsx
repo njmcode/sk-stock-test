@@ -23,13 +23,7 @@ export default class StockListItem extends React.Component {
                 <td>{this.props.description}</td>
                 <td>
                     {parseFloat(this.props.price).toFixed(2)}
-                    {(() => {
-                        if(this.props.isTaxable) {
-                          return (
-                            <small> +VAT</small>
-                          );
-                        }
-                    })()}
+                    {this.props.isTaxable && <small> +VAT</small>}
                 </td>
                 <td>{this.props.availableDate}</td>
             </tr>
