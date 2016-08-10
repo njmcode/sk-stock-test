@@ -6,7 +6,7 @@ Example stock application built using React, ES2015/Babel and Webpack.
 
 Ensure `npm` is installed.
 
-Clone the repo and run `npm` install.
+Clone the repo and run `npm install`.
 
 `npm build` will output the app to `/dist`.
 
