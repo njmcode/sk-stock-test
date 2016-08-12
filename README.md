@@ -4,7 +4,7 @@ Example stock application built using React, ES2015/Babel and Webpack.
 
 ## Installation
 
-Ensure `npm` is installed.
+Ensure `npm` is installed.  You may also need to install Webpack globally with `npm install -g webpack`.
 
 Clone the repo and run `npm install`.
 
